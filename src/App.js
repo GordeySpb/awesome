@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './components/Button';
 
 const App = () => (
-  <Button title="Button" disabled={false} color="red" focus={false} hover />
+  <Button title="Button" variant="blue" disabled="disabled" />
 );
 
 export default App;
