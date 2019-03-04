@@ -1,8 +1,11 @@
 import React from 'react';
 import Button from './components/Button';
+import Wrap from './components/Wrap';
 
 const App = () => (
-  <Button title="Button" variant="blue" disabled="disabled" />
+  <Wrap>
+    <Button title="Button" variant="blue" disabled="disabled" />
+  </Wrap>
 );
 
 export default App;

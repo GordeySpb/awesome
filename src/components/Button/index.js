@@ -40,8 +40,8 @@ const StyledButton = styled.button`
   font-size: 36px;
   cursor: pointer;
   outline: none;
-  width: 660px;
-  height: 97px;
+  width: 100%;
+  height: 100%;
   background-color: ${backgroundColor};
 
   &:hover {
@@ -57,12 +57,26 @@ const StyledButton = styled.button`
 `;
 
 const Button = ({
-  title, variant, disabled,
+  title, variant, disabled, onClick,
 }) => (
   <ThemeProvider theme={{ mode: variant }}>
-    <StyledButton disabled={disabled}>{title}</StyledButton>
+    <StyledButton disabled={disabled} onClick={onClick}>{title}</StyledButton>
   </ThemeProvider>
 );
+
+Button.propTypes = {
+  title: PropTypes.string,
+  variant: PropTypes.string,
+  disabled: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  title: 'Button',
+  variant: 'blue',
+  disabled: 'disabled',
+  onClick: PropTypes.func,
+};
 
 
 export default Button;
