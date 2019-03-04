@@ -41,8 +41,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   outline: none;
   width: 100%;
-  padding-top: 33px;
-  padding-bottom: 30px; 
+  padding: 33px 0px;
   background-color: ${backgroundColor};
   text-align: center;
   
