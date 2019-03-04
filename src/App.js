@@ -4,7 +4,7 @@ import Wrap from './components/Wrap';
 
 const App = () => (
   <Wrap>
-    <Button title="Button" variant="blue" disabled="disabled" />
+    <Button title="Button" variant="blue" />
   </Wrap>
 );
 

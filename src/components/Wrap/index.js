@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  width: 120px;
+  width: 200px;
   height: 50px; 
 `;
 
