@@ -7,7 +7,7 @@ import search from '../../icon/search.svg';
 
 const StyledInput = styled.input`
   width: 100%;
-  padding: 33px 0px 33px 30px;
+  padding: 33px 70px 33px 30px;
   font-size: 36px;
   color: #676767;
   outline: none;
@@ -61,8 +61,18 @@ class Input extends React.Component {
     if (value && onFocus && onBlur) return true;
   }
 
-  handleChange = ({target: { value }}) => {
+  getValue = () => {
     if (this.isControled) {
+      const { value } = this.props;
+      return value;
+    } else {
+      const { value } = this.state;
+      return value;
+    }
+  }
+
+  handleChange = ({target: { value }}) => {
+    if (!this.isControled) {
       const {onChange} = this.props;
       onChange(value);
     } else {
@@ -72,13 +82,12 @@ class Input extends React.Component {
 
   render() {
     const {type, placeholder, withSearchIcon, isValid, rows, onFocus, onBlur} = this.props;
-    const {value} = this.state;
     return(
       <>
         {!rows
           ? (
             <StyledInput
-              value={value}
+              value={this.getValue}
               type={type}
               placeholder={placeholder}
               withSearchIcon={withSearchIcon}
