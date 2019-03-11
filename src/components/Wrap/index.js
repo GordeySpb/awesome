@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-  width: 200px;
-  height: 50px; 
+  width: 400px;
+  height: 50px;
 `;
 
 const Wrap = ({ children }) => <StyledDiv>{children}</StyledDiv>;

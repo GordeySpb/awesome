@@ -77,7 +77,7 @@ Button.defaultProps = {
   title: 'Button',
   variant: 'blue',
   disabled: '',
-  onClick: PropTypes.func,
+  onClick: () => {},
 };
 
 
