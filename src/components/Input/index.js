@@ -110,6 +110,26 @@ class Input extends React.Component {
     );
   }
 }
+
+Input.propTypes = {
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  withSearchIcon: PropTypes.bool,
+  isValid: PropTypes.bool,
+  rows: PropTypes.number,
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func,
+};
+
+Input.defaultProps = {
+  type: 'text',
+  placeholder: '',
+  withSearchIcon: true,
+  isValid: true,
+  rows: 10,
+  onFocus: () => {},
+  onBlur: () => {},
+};
   
 
 
